@@ -12,15 +12,15 @@ class CButton:
     return a value for being clicked."""
 
     def __init__(self, win, position, radius, label):
-		self.radius = radius
-		self.position = position
-		self.x, self.y = position.getX(), position.getY()
-		self.circ = Circle(Point(self.x, self.y), self.radius)
-		self.circ.setFill("lightgray")
-		self.circ.draw(win)
-		self.label = Text(position, label)
-		self.label.draw(win)
-		self.deactivate()
+        self.radius = radius
+        self.position = position
+        self.x, self.y = position.getX(), position.getY()
+        self.circ = Circle(Point(self.x, self.y), self.radius)
+        self.circ.setFill("lightgray")
+        self.circ.draw(win)
+        self.label = Text(position, label)
+        self.label.draw(win)
+        self.deactivate()
 
     def clicked(self, p):
         """Returns True if the button is clicked while it is active and if the click
